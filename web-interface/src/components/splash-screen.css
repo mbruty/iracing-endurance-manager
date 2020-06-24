@@ -112,6 +112,12 @@ h1 {
   font-size: 25px;
   transition: visibility 0.2s;
   margin: auto;
+  -webkit-touch-callout: none;
+    -webkit-user-select: none;
+     -khtml-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
 }
 
 .discord:hover .hover-text{
@@ -125,6 +131,7 @@ h1 {
 
 .download:hover .material-icons{
   margin: auto;
+  margin-right: 30px;
 }
 
 .flex-form input[type="submit"] {
