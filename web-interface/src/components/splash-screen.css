@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700');
-
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 *, *:before, *:after {
   -webkit-box-sizing: inherit;
   -moz-box-sizing: inherit;
@@ -23,7 +23,6 @@ html {
   overflow: hidden;
 }
 
-
 h1 {
   font-size: 3rem;
   font-weight: 700;
@@ -46,6 +45,86 @@ h1 {
   justify-content: center;
   -webkit-box-align: center;
   align-items: center;
+}
+
+.fab.fa-discord{
+  font-size: 35px;
+  padding-top: 2px;
+  margin-left: 35px;
+  padding-right: 10px;
+}
+
+.material-icons{
+  font-size: 35px;
+  margin-left: -95px;
+  margin-right: auto;
+}
+
+.discord , .download {
+  overflow: hidden;
+  align-items: center;
+  font-family: 'Lato', sans-serif;
+  display:flex;
+  width: 100px;
+  height: 45px;
+  appearance: none;
+  border:none;
+  outline: none;
+  background: none;
+  color: white;
+  cursor: pointer;
+  float: right;
+  -webkit-transition: width 0.2s  margin 0.2s;
+  -moz-transition: width 0.2s, margin 0.2s;
+  -ms-transition: width 0.2s, margin 0.2s;
+  transition: width 0.2s, margin 0.2s;
+  overflow: hidden;
+}
+
+.discord{
+  background-color: #7289da;
+  border-radius: 10px 0px 0px 10px;
+}
+
+.discord:hover {
+  width: 250px;
+  margin-left: -150px;
+}
+
+.download{
+  background-color: rgb(235, 95, 39);
+  border-radius: 0px 10px 10px 00px;
+}
+
+.download:hover{
+  width: 250px;
+  margin-right: -150px;
+}
+
+.btn-container{
+  display: flex;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.hover-text{
+  visibility: hidden;
+  font-size: 25px;
+  transition: visibility 0.2s;
+  margin: auto;
+}
+
+.discord:hover .hover-text{
+  visibility: visible;
+}
+
+.download:hover .hover-text{
+  visibility: visible;
+  padding-left: 100px;
+}
+
+.download:hover .material-icons{
+  margin: auto;
 }
 
 .flex-form input[type="submit"] {
