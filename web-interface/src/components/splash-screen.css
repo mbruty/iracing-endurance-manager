@@ -110,7 +110,7 @@ h1 {
 .hover-text{
   visibility: hidden;
   font-size: 25px;
-  transition: visibility 0.2s;
+  transition: visibility 0s;
   margin: auto;
   -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -126,7 +126,7 @@ h1 {
 
 .download:hover .hover-text{
   visibility: visible;
-  padding-left: 100px;
+  padding-left: 70px;
 }
 
 .download:hover .material-icons{
