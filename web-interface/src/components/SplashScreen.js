@@ -4,34 +4,25 @@ import './splash-screen.css';
 export default class SplashScreen extends Component {
     constructor(props){
         super(props);
-        this.sessionID = null;
-        this.state = {
-            loggedIn: false,
-        }
+        this.callback = props.callback;
     }
 
-    handleSumbit(e){
-        this.sessionID = document.getElementById('sessionTxtBox').innerText;
-    }
     render() {
-        if(this.loggedIn) {
-            return null;
-        }
         return (
-            <div class ="background">
-                <div class="cover">
+            <div className ="background">
+                <div className="cover">
                     <h1>Race endurance manager</h1>
-                    <form  class="flex-form">
+                    <form  className="flex-form">
                         <input type="session" placeholder="Session ID" id="sessionTxtBox"/>
-                        <input type="submit" value="Submit"/>
+                        <input type="submit" value="Submit" onClick={(e) => {this.callback(e, document.getElementById('sessionTxtBox').value)}}/>
                     </form>
-                    <div class="btn-container">
-                        <div class="discord">
-                            <i class='fab fa-discord'></i>
-                            <span class="hover-text">Invite Bot</span>
+                    <div className="btn-container">
+                        <div className="discord">
+                            <i className='fab fa-discord'></i>
+                            <span className="hover-text">Invite Bot</span>
                         </div>
-                        <div class="download">
-                            <span class="hover-text">Client</span>
+                        <div className="download">
+                            <span className="hover-text">Client</span>
                             <i class="material-icons">get_app</i>
                         </div>
                     </div>
