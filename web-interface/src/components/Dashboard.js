@@ -1,6 +1,7 @@
-import React, { Component } from 'react'
-import SplashScreen from './SplashScreen'
+import React, { Component } from 'react';
+import SplashScreen from './SplashScreen';
 import TopBar from './TopBar';
+import StintManager from './StintManager';
 
 export default class Dashboard extends Component {
 
@@ -23,6 +24,7 @@ export default class Dashboard extends Component {
             return (
                 <div>
                     <TopBar></TopBar>
+                    <StintManager></StintManager>
                 </div>
             );
         }
