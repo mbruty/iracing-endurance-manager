@@ -1,0 +1,76 @@
+.top-bg{
+  background-color: #282c34;
+  box-shadow: 5px 10px;
+  color: white;
+  height: 75px;
+  width: 100%;
+  box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.flex-form{
+  padding-top: 11px;
+  float: right;
+  width: 40%;
+}
+
+a.top-bar{
+  margin-top: 50px;
+  font-family: 'Lato', sans-serif;
+  color: white;
+  font-size: 40px;
+}
+
+.btn-container-nav{
+  background-color: #282c34;
+  padding-right: 10px;
+  display: flex;
+  text-align: center;
+}
+
+.btn-container-nav .fab.fa-discord, .btn-container-nav .material-icons{
+  font-size: 35px;
+  margin-left: 15px;
+}
+
+.discord-btn , .download-btn {
+  align-items: center;
+  font-family: 'Lato', sans-serif;
+  display:flex;
+  width: 60px;
+  height: 55px;
+  appearance: none;
+  border:none;
+  outline: none;
+  background: none;
+  color: white;
+  cursor: pointer;
+  -webkit-transition: width 0.2s  margin 0.2s;
+  -moz-transition: width 0.2s, margin 0.2s;
+  -ms-transition: width 0.2s, margin 0.2s;
+  transition: width 0.2s, margin 0.2s;
+}
+
+.discord-btn{
+  background-color: #465a5e;
+  border-radius: 10px 0px 0px 10px;
+}
+
+.discord-btn:hover{
+  background-color: #7289da;
+}
+
+.download-btn{
+  background-color: #465a5e;
+  padding: auto;
+  border-radius: 0px 10px 10px 00px;
+}
+
+.download-btn:hover{
+  background-color: rgb(235, 95, 39);
+}
+
+img.logo{
+  vertical-align:middle;
+  height: 75px;
+  width: auto;
+}
