@@ -11,12 +11,12 @@ export default class SplashScreen extends Component {
         return (
             <div className ="background">
                 <div className="cover">
-                    <h1>Race endurance manager</h1>
+                    <h1 className="splash-title">Race endurance manager</h1>
                     <form  className="flex-form">
                         <input type="session" placeholder="Session ID" id="sessionTxtBox"/>
                         <input type="submit" value="Submit" onClick={(e) => {this.callback(e, document.getElementById('sessionTxtBox').value)}}/>
                     </form>
-                    <div className="btn-container">
+                    <div className="btn-container-splash">
                         <div className="discord">
                             <i className='fab fa-discord'></i>
                             <span className="hover-text">Invite Bot</span>

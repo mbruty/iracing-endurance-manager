@@ -23,7 +23,7 @@ html {
   overflow: hidden;
 }
 
-h1 {
+.splash-title {
   font-size: 3rem;
   font-weight: 700;
   color: #fff;
@@ -47,14 +47,14 @@ h1 {
   align-items: center;
 }
 
-.fab.fa-discord{
+.btn-container-splash .fab.fa-discord{
   font-size: 35px;
   padding-top: 2px;
   margin-left: 35px;
   padding-right: 10px;
 }
 
-.material-icons{
+.btn-container-splash .material-icons{
   font-size: 35px;
   margin-left: -95px;
   margin-right: auto;
@@ -101,7 +101,7 @@ h1 {
   margin-right: -150px;
 }
 
-.btn-container{
+.btn-container-splash{
   display: flex;
   text-align: center;
   padding-top: 10px;
