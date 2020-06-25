@@ -1,0 +1,1 @@
+web: cd web-interface &7 npm start
