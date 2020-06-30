@@ -1,6 +1,31 @@
 .stint-manager{
-    background-color: indigo;
+    background-color: #071013;
     width: 65%;
-    height: fit-content;
     float: left;
+}
+
+.stint-title{
+    background-color: #75ABBC;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.5em;
+    text-align: center;
+    border-radius: 0px 0px 10px 10px;
+}
+.stint-entry{
+    background-color: #DFE0E2;
+    width: 95%;
+    height: 50px;
+    margin: auto;
+    border-style: solid;
+    margin-top: 6px;
+    margin-bottom: 3px;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.driver-name-box{
+    border: none;
+    height: 30px;
+    margin-top: 7px;
+    margin-left: 10px;
+    width: 25%;
 }

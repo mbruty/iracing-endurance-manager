@@ -12,7 +12,7 @@ export default class Dashboard extends Component {
         this.handleSessionSubmit = this.handleSessionSubmit.bind(this);
         this.onDragEnd = this.onDragEnd.bind(this);
         this.state = {
-            sessionID: "asdf",
+            sessionID: undefined,
             stintOrder : ['stint-1', 'stint-2', 'stint-3', 'stint-4', 'stint-5', 'stint-6', ],
             stints : {
                 'stint-1': { name: 'Mike', duration: '35'},
@@ -42,7 +42,7 @@ export default class Dashboard extends Component {
                 return;
         }
         this.setState((state) => {
-            return { sessionID: state.sessionID, stintOrder: state.stintOrder, 
+            return { sessionID: state.sessionID, stints: state.stints, 
                 stintOrder: reorder(state.stintOrder, source, destination)}
         });
     }
@@ -55,15 +55,15 @@ export default class Dashboard extends Component {
                     <DragDropContext
                     onDragEnd={this.onDragEnd}
                     >
-                    <div>
-                    <StintList
-                            internalScroll
-                            key="stint-dnd"
-                            listId="stint-dnd"
-                            listType="CARD"
-                            data={this.state.stints}
-                            order={this.state.stintOrder}
-                        />
+                    <div className="stint-manager">
+                        <StintList
+                                internalScroll
+                                key="stint-dnd"
+                                listId="stint-dnd"
+                                listType="CARD"
+                                data={this.state.stints}
+                                order={this.state.stintOrder}
+                            />
                     </div>
                     </DragDropContext>
                 </div>

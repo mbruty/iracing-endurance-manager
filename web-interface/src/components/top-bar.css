@@ -1,5 +1,5 @@
 .top-bg{
-  background-color: #282c34;
+  background-color: #23B5D3;
   box-shadow: 5px 10px;
   color: white;
   height: 75px;
@@ -21,7 +21,7 @@ a.top-bar{
 }
 
 .btn-container-nav{
-  background-color: #282c34;
+  background-color: #23B5D3;
   padding-right: 10px;
   display: flex;
   text-align: center;

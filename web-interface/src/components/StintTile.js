@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
-import { Droppable, Draggable, DroppableProvided } from 'react-beautiful-dnd';
 
 export default class StintTile extends Component {
 
     render() {
         return (
-            <div style={{borderStyle: "solid"}}>{this.props.data.name}</div>
+            <div className="stint-entry">
+                <input placeholder="Driver Name" id="sessionTxtBox" className="driver-name-box"/>
+                <a>{this.props.data.name}</a>
+            </div>
         );
     }
 }
