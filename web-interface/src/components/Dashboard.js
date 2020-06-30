@@ -10,6 +10,7 @@ export default class Dashboard extends Component {
     constructor(props){
         super(props);
         this.handleSessionSubmit = this.handleSessionSubmit.bind(this);
+        this.onDragEnd = this.onDragEnd.bind(this);
         this.state = {
             sessionID: "asdf",
             stintOrder : ['stint-1', 'stint-2', 'stint-3', 'stint-4', 'stint-5', 'stint-6', ],
@@ -29,6 +30,22 @@ export default class Dashboard extends Component {
         this.setState({sessionID: sessionID});
     }
 
+    onDragEnd(e) {
+        const { destination, source } = e;
+        // // dropped outside the list
+        if (!destination) {
+            return;
+        }
+
+        if( destination.droppableId === source.droppableId &&
+            destination.index === source.index){
+                return;
+        }
+        this.setState((state) => {
+            return { sessionID: state.sessionID, stintOrder: state.stintOrder, 
+                stintOrder: reorder(state.stintOrder, source, destination)}
+        });
+    }
     render() {
         if(this.state.sessionID !== undefined){
             console.log(this.state.sessionID)
@@ -36,21 +53,7 @@ export default class Dashboard extends Component {
                 <div>
                     <TopBar></TopBar>
                     <DragDropContext
-                    onDragEnd={({ destination, source }) => {
-                        // // dropped outside the list
-                        if (!destination) {
-                        return;
-                        }
-
-                        if( destination.droppableId === source.droppableId &&
-                            destination.index === source.index){
-                                return;
-                        }
-                        this.setState((state) => {
-                            return { sessionID: state.sessionID, stintOrder: state.stintOrder, 
-                                stintOrder: reorder(state.stintOrder, source, destination)}
-                        });
-                    }}
+                    onDragEnd={this.onDragEnd}
                     >
                     <div>
                     <StintList
