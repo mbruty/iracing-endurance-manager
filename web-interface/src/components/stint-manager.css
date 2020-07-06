@@ -1,7 +1,11 @@
 .stint-manager{
-    background-color: #071013;
+    background-color: #263238;
     width: 65%;
     float: left;
+    position: absolute;
+    top: 75px;
+    bottom: 0;
+    border-right: 5px solid #78909C;
 }
 
 .stint-title{
@@ -16,16 +20,37 @@
     width: 95%;
     height: 50px;
     margin: auto;
-    border-style: solid;
+    border-style: none;
     margin-top: 6px;
     margin-bottom: 3px;
     border-radius: 10px 10px 10px 10px;
 }
 
+.stint-time{
+    font-family: 'Lato', sans-serif;
+    padding-left: 5px;
+}
+
 .driver-name-box{
     border: none;
-    height: 30px;
+    height: 35px;
     margin-top: 7px;
     margin-left: 10px;
+    padding-left: 5px;
     width: 25%;
+}
+.driver-name-box:focus{
+    outline: none;
+}
+.select-stint{
+    height: 35px;
+    margin-left: 10px;
+    padding-right: 5px;
+    outline:0px;
+    border: none;
+}
+
+.stint-entry .material-icons{
+    font-size: 3em;
+    float: right;
 }

@@ -12,15 +12,15 @@ export default class Dashboard extends Component {
         this.handleSessionSubmit = this.handleSessionSubmit.bind(this);
         this.onDragEnd = this.onDragEnd.bind(this);
         this.state = {
-            sessionID: undefined,
+            sessionID: "asdf",
             stintOrder : ['stint-1', 'stint-2', 'stint-3', 'stint-4', 'stint-5', 'stint-6', ],
             stints : {
-                'stint-1': { name: 'Mike', duration: '35'},
-                'stint-2': { name: 'Mike', duration: '35'},
-                'stint-3': { name: 'Mike', duration: '35'},
-                'stint-4': { name: 'Mike', duration: '35'},
-                'stint-5': { name: 'Teun', duration: '35'},
-                'stint-6': { name: 'Teun', duration: '35'},
+                'stint-1': { name: 'Mike', duration: '35', startTime: '13:35'},
+                'stint-2': { name: 'Mike', duration: '35', startTime: '13:35'},
+                'stint-3': { name: 'Mike', duration: '35', startTime: '13:35'},
+                'stint-4': { name: 'Mike', duration: '35', startTime: '13:35'},
+                'stint-5': { name: 'Teun', duration: '35', startTime: '13:35'},
+                'stint-6': { name: 'Teun', duration: '35', startTime: '13:35'},
             }
         }
     }
@@ -48,10 +48,9 @@ export default class Dashboard extends Component {
     }
     render() {
         if(this.state.sessionID !== undefined){
-            console.log(this.state.sessionID)
             return (
                 <div>
-                    <TopBar></TopBar>
+                    <TopBar/>
                     <DragDropContext
                     onDragEnd={this.onDragEnd}
                     >
