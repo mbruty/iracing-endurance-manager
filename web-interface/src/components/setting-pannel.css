@@ -1,0 +1,10 @@
+.settings-pannel{
+    background-color: #263238;
+    width: 35%;
+    float: right;
+    position: absolute;
+    left: 65%;
+    top: 75px;
+    bottom: 45%;
+    border-bottom: 5px solid #546e7a;
+}

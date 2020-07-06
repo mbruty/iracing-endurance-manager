@@ -4,6 +4,8 @@ import { reorder } from "./ReorderStints";
 import SplashScreen from './SplashScreen';
 import TopBar from './TopBar';
 import StintList from './StintList';
+import SettingPanel from './SettingPanel';
+import DamagePanel from './DamagePanel'
 
 export default class Dashboard extends Component {
 
@@ -65,6 +67,8 @@ export default class Dashboard extends Component {
                             />
                     </div>
                     </DragDropContext>
+                    <SettingPanel/>
+                    <DamagePanel/>
                 </div>
             );
         }

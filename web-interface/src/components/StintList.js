@@ -16,7 +16,7 @@ export default class StintList extends Component {
     render() {
         return (
             <div>
-                <div className="stint-title">Stint Sheet</div>
+                <div className="title">Stint Sheet</div>
                 <Droppable
                 droppableId={this.props.listId}
                 type={this.props.listType}
