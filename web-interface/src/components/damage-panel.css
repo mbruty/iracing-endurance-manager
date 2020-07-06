@@ -1,0 +1,46 @@
+.damage-panel{
+    background-color: #263238;
+    width: 35%;
+    float: right;
+    position: absolute;
+    left: 65%;
+    top:55%;
+    bottom: 0;
+}
+
+
+.damage-panel label {
+    margin-right: 20px;
+    margin-left: 10px;
+    width: 250px;
+    color: white;
+    font-size: 30px;
+}
+
+.damage-input{
+    margin-top: 10px;
+    background-color: #546e7a;
+    border: none;
+    margin-left: 20px;
+    width:70%;
+}
+
+.field-wrap input:focus{
+    outline: none;
+}
+
+.field-wrap {
+    width: 100%;
+    margin-right: 10px;
+    margin-top: 5px;
+    display: flex;
+}
+.field-wrap input {
+    padding-left: 5px;
+    width: 100%;
+    color: white;
+    font-size: 25px;
+    flex-grow: 1;
+    background-color: #546e7a;
+    border: none;
+}
