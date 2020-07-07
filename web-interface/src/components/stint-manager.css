@@ -8,6 +8,9 @@
     border-right: 5px solid #546e7a;
 }
 
+.stint-manager *{
+    color: white;
+}
 .title{
     color: white;
     background-color: #75ABBC;
@@ -17,7 +20,7 @@
     border-radius: 0px 0px 10px 10px;
 }
 .stint-entry{
-    background-color: #DFE0E2;
+    background-color: #546e7a;
     width: 95%;
     height: 50px;
     margin: auto;
@@ -39,6 +42,7 @@
     margin-left: 10px;
     padding-left: 5px;
     width: 25%;
+    background-color: #78909c;
 }
 .driver-name-box:focus{
     outline: none;
@@ -49,6 +53,7 @@
     padding-right: 5px;
     outline:0px;
     border: none;
+    background-color: #78909c;
 }
 
 .stint-entry .material-icons{
