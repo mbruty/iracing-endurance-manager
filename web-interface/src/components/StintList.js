@@ -39,6 +39,9 @@ export default class StintList extends Component {
                             </Draggable>
                         ))}
                         {dropProvided.placeholder}
+                        <div className="stint-add">
+                            <i className="material-icons">add_circle</i>
+                        </div>
                     </div>
                 )}
                 </Droppable>

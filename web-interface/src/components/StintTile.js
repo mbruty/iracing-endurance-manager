@@ -12,6 +12,7 @@ export default class StintTile extends Component {
                     <option value="fuel-tyres">Fuel + Tyres</option>
                 </select>
                 <i className="material-icons">drag_indicator</i>
+                <i className="material-icons">remove_circle</i>
             </div>
         );
     }

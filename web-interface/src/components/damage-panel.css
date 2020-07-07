@@ -9,10 +9,10 @@
 }
 
 
-.damage-panel label {
+.damage-panel label, .settings-pannel label {
     margin-right: 20px;
     margin-left: 10px;
-    width: 250px;
+    width: 350px;
     color: white;
     font-size: 30px;
 }
