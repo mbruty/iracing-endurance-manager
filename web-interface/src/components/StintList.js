@@ -14,6 +14,7 @@ export default class StintList extends Component {
     }
 
     render() {
+        console.log(this.props.data);
         return (
             <div>
                 <div className="title">Stint Sheet</div>
@@ -25,22 +26,22 @@ export default class StintList extends Component {
                 >
                 {dropProvided => (
                     <div {...dropProvided.droppableProps} ref={dropProvided.innerRef}>
-                        {this.props.order.map((color, index) => (
-                            <Draggable key={color} draggableId={color} index={index}>
+                        {this.props.order.map((name, index) => (
+                            <Draggable key={name} draggableId={name} index={index}>
                             {dragProvided => (
                                 <div
                                 {...dragProvided.dragHandleProps}
                                 {...dragProvided.draggableProps}
                                 ref={dragProvided.innerRef}
                                 >
-                                <StintTile data={this.props.data[color]}/>
+                                <StintTile data={this.props.data[index]}/>
                                 </div>
                             )}
                             </Draggable>
                         ))}
                         {dropProvided.placeholder}
                         <div className="stint-add">
-                            <i className="material-icons">add_circle</i>
+                            <i className="material-icons" onClick={this.props.newStint}>add_circle</i>
                         </div>
                     </div>
                 )}

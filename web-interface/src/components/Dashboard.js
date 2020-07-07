@@ -12,19 +12,23 @@ export default class Dashboard extends Component {
     constructor(props){
         super(props);
         this.handleSessionSubmit = this.handleSessionSubmit.bind(this);
+        this.addNewStint = this.addNewStint.bind(this);
         this.onDragEnd = this.onDragEnd.bind(this);
         this.state = {
             sessionID: "asdf",
-            stintOrder : ['stint-1', 'stint-2', 'stint-3', 'stint-4', 'stint-5', 'stint-6', ],
-            stints : {
-                'stint-1': { name: 'Mike', duration: '35', startTime: '13:35'},
-                'stint-2': { name: 'Mike', duration: '35', startTime: '13:35'},
-                'stint-3': { name: 'Mike', duration: '35', startTime: '13:35'},
-                'stint-4': { name: 'Mike', duration: '35', startTime: '13:35'},
-                'stint-5': { name: 'Teun', duration: '35', startTime: '13:35'},
-                'stint-6': { name: 'Teun', duration: '35', startTime: '13:35'},
-            }
+            stintOrder : [],
+            stints : [],
+            duration: '35'
         }
+    }
+
+    addNewStint(){
+        let stateCopy = JSON.parse(JSON.stringify(this.state));
+        let stintName = `stint-${this.state.stintOrder.length + 1}`;
+        stateCopy.stintOrder.push(stintName);
+        stateCopy.stints.push({stintName: `${stintName}`, name: '', startTime: '13:35'});
+
+        this.setState(stateCopy);
     }
 
     handleSessionSubmit(e, sessionID){
@@ -64,6 +68,7 @@ export default class Dashboard extends Component {
                                 listType="CARD"
                                 data={this.state.stints}
                                 order={this.state.stintOrder}
+                                newStint={this.addNewStint}
                             />
                     </div>
                     </DragDropContext>
