@@ -9,6 +9,21 @@
     overflow: auto;
 }
 
+.stint-manager::-webkit-scrollbar {
+    width: 12px;
+}
+
+.stint-manager::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.301); 
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.301);
+    border-radius: 10px;
+}
+
+.stint-manager::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.603); 
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.603);
+}
 .stint-manager *{
     color: white;
 }
